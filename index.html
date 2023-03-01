@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- some font awesome icon -->
+    <script
+      src="https://kit.fontawesome.com/eabb013074.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h2 style="--i: 0">Hi there</h2>
+          <h2 style="--i: 1">Welcome to my website</h2>
+          <h2 style="--i: 2">Welcome to my website</h2>
+          <h2 style="--i: 3">Welcome to my website</h2>
+          <h2 style="--i: 4">Welcome to my website</h2>
+          <h2 style="--i: 5">Welcome to my website</h2>
+          <h2 style="--i: 6">Welcome to my website</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------about------ -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Ayaka.gif" />
+          </div>
+          <div class="about-col-2">
+            <!-- need to indent below -->
+            <h2 class="sub-title">About me</h2>
+            <p style="text-align: justify">
+              I am Sau Kang from Kampar, Perak. Currently I'm studying in
+              <span class="highlight"
+                >Computer Science with specialism of Data Analytics</span
+              >
+              in <span class="highlight">Asia Pacific University</span>.
+              Computer and Big Data will be a important part of our life, that's
+              the reason why I am taking this course (I like algorithm too). I
+              learnt basic HTML, CSS and JavaScript during my sem break to build
+              my portfolio website.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('info')">Read more</p>
+            </div>
+            <!-- within opentab function is an id -->
+
+            <div class="tab-contents active-content" id="skills">
+              <ul>
+                <li><span>Python Programming</span><br />Beginner</li>
+                <li><span>C Programming</span><br />Beginner</li>
+                <li><span>Frontend Language</span><br />Beginner</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2010 - 2015</span><br />SJK(C) Chung Huah Kampar</li>
+                <li>
+                  <span>2016 - 2021</span><br />Pei Yuan High School Kampar
+                </li>
+                <li>
+                  <span>2022 - current</span><br />Asia Pacific University
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="info">
+              <ul>
+                <li><span>Full Name</span><br />Lo Sau Kang</li>
+                <li><span>Birthday</span><br />7 June 2003</li>
+                <li><span>Gender</span><br />Male</li>
+                <li><span>Nationality</span><br />Malaysian</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="certificates row">
+          <img src="images/cert1.png" class="cert" />
+          <img src="images/cert2.png" class="cert" />
+        </div>
+      </div>
+    </div>
+
+    <!-- portfolio -->
+    <div id="portfolio">
+      <div class="container">
+        <h2 class="sub-title">My Hobbies</h2>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/go.png" id="go_image" />
+            <div class="layer">
+              <h3>IGO board game</h3>
+              <p>learn more</p>
+              <a href="#igo" onclick="show('igo')"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/unreal.webp" id="game-dev" />
+            <div class="layer">
+              <h3>Game development</h3>
+              <p>learn more</p>
+              <a href="#game" onclick="show('game')"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" id="genshin" />
+            <div class="layer">
+              <h3>Anime translation</h3>
+              <p>learn more</p>
+              <a href="#translation" onclick="show('translation')"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- hidden section -->
+    <div id="igo" class="hidden_section">
+      <img src="images/igo_cert.png" id="igocert" />
+      <p>
+        My IGO journey started in 2022 after joining a workshop held by APU
+        <br />
+        Japanese Cultural Club. I like this game because I enjoy building my<br />
+        own terrority. You could add me at
+        <a href="https://online-go.com/user/view/1178746">Online Go</a> too.
+      </p>
+    </div>
+
+    <div id="game" class="hidden_section">
+      <video width="1000" height="520" controls>
+        <source src="images/UnrealVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        I like video games, and I would love to create them too. I treat this
+        <br />
+        hobby as my sub-skill when I have free time. I joined APU game <br />
+        development club to meet more people that share the same hobby.
+      </p>
+    </div>
+
+    <div id="translation" class="hidden_section">
+      <iframe
+        width="1000"
+        height="520"
+        src="https://www.youtube.com/embed/w7tAXNNVoEY"
+      >
+        <!--embed mode required-->
+      </iframe>
+      <p>
+        I provide translation service (CN - EN - BM) as I treat it as a hobby,
+        self learning session and part time job.<br />
+        Currently I am collaborating with an amazing animator(ZhouZhou's Bizarre
+        Adventure) from China.
+      </p>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h2 class="subtitle">Contact Me</h2>
+            <p><i class="fa-solid fa-paper-plane"></i>saukang0607@gmail.com</p>
+            <p id="phone"><i class="fas fa-phone-square-alt"></i>0165516705</p>
+            <div class="social-icons">
+              <a href="https://wa.me/165516705?text=Your%20portfolio%20is%20looking%20good%20!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="discordapp.com/users/阿卢#7417" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <a href="images/Interim_Transcript.pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Sau Kang 2022</p>
+      </div>
+    </div>
+
+    <script>
+      /* about session click functions*/
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-content");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-content");
+      }
+    </script>
+
+    <script>
+      /* hidden section */
+      function show(section_name) {
+        const element = document.getElementById(section_name);
+
+        if (element.classList.contains("hidden_section")) {
+          document
+            .getElementById(section_name)
+            .classList.remove("hidden_section");
+        } else {
+          document.getElementById(section_name).classList.add("hidden_section");
+        }
+      }
+    </script>
+
+    <script>
+      /* menu click function*/
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      /* form submit function*/
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw0fp2GPp2J_oz9br3iRP1j7XnBjOGQ5k0x1wRULgiRyNgQpho_BW-Lm5h4yr493xXr/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
